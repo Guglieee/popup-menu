@@ -1,0 +1,317 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+/* ROBE */
+
+.banneranim {
+    padding-left: 38%;
+  }
+  
+  ::selection{
+    background:	#4df300;
+    color: rgb(0, 0, 0);
+  }
+  
+  /* SCROLL BAR */
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #4df300; 
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #4df300; 
+  }
+  
+  /* EFFETTO SCRITTURA */
+  .scrittura {
+    width: 75%;
+    animation: 
+      typing 3.0s steps(30, end),
+  }
+  
+  @keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  /* TOT */
+  /*181c24*/
+  /*0d1117*/
+  .menu{
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 78px;
+    background: #0d1117
+    ;
+    padding: 6px 14px;
+    z-index: 99;
+    transition: all 0.5s ease;
+  }
+  .menu.apri{
+    width: 250px;
+  }
+  .menu .info-plasma{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .menu .info-plasma .icon{
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .menu .info-plasma .logo_name{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  .menu.apri .info-plasma .icon,
+  .menu.apri .info-plasma .logo_name{
+    opacity: 1;
+  }
+  .menu .info-plasma #btn{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    transition: all 0.4s ease;
+    font-size: 23px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .menu.apri .info-plasma #btn{
+    text-align: right;
+  }
+  .menu i{
+    color: #fff;
+    height: 60px;
+    min-width: 50px;
+    font-size: 28px;
+    text-align: center;
+    line-height: 60px;
+  }
+  .menu .nav-list{
+    margin-top: 20px;
+    height: 100%;
+  }
+  .menu li{
+    position: relative;
+    margin: 8px 0;
+    list-style: none;
+  }
+  .menu li .tooltip{
+    position: absolute;
+    top: 8px;
+    left: calc(100% + 30px);
+    z-index: 3;
+    background: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 400;
+    opacity: 0;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: 0s;
+  }
+  .menu li:hover .tooltip{
+    opacity: 1;
+    transition: all 0.6s ease; 
+    transform: scale(1.15);
+  }
+  .menu.apri li .tooltip{
+    display: none;
+  }
+  .menu input{
+    font-size: 15px;
+    color: #FFF;
+    font-weight: 400;
+    outline: none;
+    height: 50px;
+    width: 100%;
+    width: 50px;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.5s ease;
+    background: #4df300;
+  }
+  .menu.apri input{
+    padding: 0 20px 0 50px;
+    width: 100%;
+  }
+  .menu .bx-search{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    font-size: 22px;
+    background: #4df300;
+    color: #FFF;
+  }
+  .menu.apri .bx-search:hover{
+    background: #0d1117;
+    color: #FFF;
+  }
+  .menu .bx-search:hover, .active{
+    background: #FFF;
+    color: #4df300;
+  }
+  .menu li a{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    border-radius: 12px;
+    align-items: center;
+    text-decoration: none;
+    transition: all 0.4s ease;
+    background: #181c24;
+  }
+  .menu li a:hover{
+    background: #FFF;
+  }
+  .menu li a .links_name{
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+  }
+  .menu.apri li a .links_name{
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .menu li a:hover .links_name,
+  .menu li a:hover i{
+    transition: all 0.5s ease;
+    color: #181c24;
+  }
+  .menu li i{
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+    border-radius: 12px;
+  }
+  .menu li.profile{
+    position: fixed;
+    height: 60px;
+    width: 78px;
+    left: 0;
+    bottom: 0px;
+    padding: 11px 14px;
+    background: #0d1117;
+    transition: all 0.5s ease;
+    overflow: hidden;
+  }
+  .menu.apri li.profile{
+    width: 250px;
+  }
+  .menu li .profile-details{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .menu li img{
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-right: 15px;
+  }
+  .menu li.profile .name,
+  .menu li.profile .job{
+    font-size: 15px;
+    font-weight: 400;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .menu li.profile .job{
+    font-size: 12px;
+  }
+  .menu .profile #log_out{
+    opacity: 0;
+    position: absolute;
+    /* top: 50%;
+    width: 100%;
+    height: 60px; */
+    line-height: 60px;
+    border-radius: 0px;
+    transition: all 0.5s ease;
+  }
+  .menu.apri .profile #log_out{
+    opacity: 1;
+    width: 170%;
+    top: 16%;
+    background: none;
+  } 
+  .contenuto{
+    position: relative;
+    background: #fff;
+    min-height: 100vh;
+    top: 0;
+    left: 78px;
+    width: calc(100% - 78px);
+    transition: all 0.5s ease;
+    z-index: 2;
+  }
+  .menu.apri ~ .contenuto{
+    left: 250px;
+    width: calc(100% - 250px);
+  }
+  .contenuto .text{
+    display: inline-block;
+    color: #4df300;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 18px
+  }
+
+  footer {
+      display: flex;
+    position: static;
+      justify-content: center;
+      align-items: center;
+    color: #ffff;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 110px;
+    background-color: #1d1d1d;
+  }
+  .pldev {
+    color: white;
+    font: bold 16px Arial;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .pldev:hover {
+    color: #4df300;
+  }
+  @media (max-width: 420px) {
+    .menu li .tooltip{
+      display: none;
+    }
+  }
