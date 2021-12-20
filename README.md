@@ -1,3 +1,4 @@
 # popup
 
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+A simple side pop-up menu to place on your website
+Nothing special :D
